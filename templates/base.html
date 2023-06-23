@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        {% block head %}
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}
+            <!-- Bootstrap CSS -->
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+
+        <title>Your page title</title>
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Your page content -->
+        {% block content %}{% endblock %}
+        <h1>test base.html page</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col">col</div>
+                <div class="col">
+                    <main class="p-3">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a href="#sample_tab1" class="nav-link active" data-bs-toggle="tab">タブ1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sample_tab2" class="nav-link" data-bs-toggle="tab">タブ2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sample_tab3" class="nav-link" data-bs-toggle="tab">タブ3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#sample_tab4" class="nav-link" data-bs-toggle="tab">タブ4</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="sample_tab1" class="tab-pane active">
+                                <h2>Sample tab1</h2>
+                            </div>
+                            <div id="sample_tab2" class="tab-pane">
+                                <h2>Sample tab2</h2>
+                            </div>
+                            <div id="sample_tab3" class="tab-pane">
+                                <h2>Sample tab3</h2>
+                            </div>
+                            <div id="sample_tab4" class="tab-pane">
+                                <h2>Sample tab4</h2>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+        {% block scripts %}
+            <!-- Optional JavaScript -->
+            {{ bootstrap.load_js() }}
+        {% endblock %}
+    </body>
+</html>
